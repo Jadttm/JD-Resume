@@ -44,17 +44,27 @@ https://cdn.jsdelivr.net/npm/splitting@1.0.6/dist/splitting-cells.css
 </style>
 </head>
 <body class="body">
-<div id="loginbox" class="lightbox" >
-		<div class="horizontal">
-			<div class="vertical">
-				<div class="box">
-					<input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="password" /> <br />
-					<button id="loginbutton" type="button">Enter</button>
-					<p id="wrongPassword" style="display: none">wrong password</p>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="utility-page-wrap">
+    <div class="utility-page-content w-password-page w-form">
+      <form id="email-form" name="email-form" data-name="Email Form" action="/.wf_auth" method="post" class="utility-page-form w-password-page" data-wf-page-id="64f5b0a8ecc30ff7360d35e8" data-wf-element-id="64f454905c6740b91d1e9cc600000000000c">
+        <p class="fa-icons"></p>
+        <h2 class="subpage-headlines pw-page">Geschützter Bereich</h2>
+        <div class="padding-xsmall"></div><label for="pass" class="field-label w-password-page">Geben Sie das Passwort ein, um den Downloadbereich freizuschalten.</label>
+        <div class="padding-xsmall"></div><input type="password" class="cursor-hover w-password-page w-input" autofocus="true" maxlength="256" name="pass" data-name="field" placeholder="passwort eingeben" id="pass"><input type="submit" value="Anmelden" data-wait="Please wait..." class="pw-submit-btn w-password-page w-button">
+        <div class="w-password-page w-form-fail">
+          <div>Falsches Passwort. Bitte versuchen Sie es erneut.</div>
+        </div>
+        <div style="display:none" class="w-password-page w-embed w-script"><input type="hidden" name="path" value="<%WF_FORM_VALUE_PATH%>"><input type="hidden" name="page" value="<%WF_FORM_VALUE_PAGE%>"></div>
+        <div style="display:none" class="w-password-page w-embed w-script">
+          <script type="application/javascript">(function _handlePasswordPageOnload() {
+	  if (/[?&]e=1(&|$)/.test(document.location.search)) {
+	    document.querySelector('.w-password-page.w-form-fail').style.display = 'block';
+	  }
+	})()</script>
+        </div>
+      </form>
+    </div>
+  </div>
   <footer class="footer-wrapper">
     <div class="border-gradient"></div>
     <div class="copyright-wrapper">
@@ -442,56 +452,5 @@ setTimeout(() => {$(window).on("resize", function () {
 setTimeout(() => {$(".transition").css("display", "none");}, 50);});
 }, introDurationMS);
 </script>
-
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-
-
-	 <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
-
-	<script type="text/javascript">
-	"use strict";
-
-
-	function loadPage(pwd) {
-
-		var hash= pwd;
-		hash= Sha1.hash(pwd);
-		var url= hash + "/downloads.html";
-
-		$.ajax({
-			url : url,
-			dataType : "html",
-			success : function(data) {
-
-				window.location= url;
-
-			},
-			error : function(xhr, ajaxOptions, thrownError) {
-
-
-				parent.location.hash= hash;
-
-				//$("#wrongPassword").show();
-				$("#password").attr("placeholder","wrong password");
-				$("#password").val("");
-			}
-		});
-	}
-
-
-	$("#loginbutton").on("click", function() {
-		loadPage($("#password").val());
-	});
-	$("#password").keypress(function(e) {
-		if (e.which == 13) {
-
-			loadPage($("#password").val());
-		}
-	});
-	$("#password").focus();
-
-	</script>
-
-	
 </body>
 </html>
