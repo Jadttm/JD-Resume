@@ -1,14 +1,14 @@
 <!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
 <!--  Last Published: Mon Sep 04 2023 15:01:27 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="64f5b0a8ecc30ff7360d35ed" data-wf-site="64f5b0a8ecc30ff7360d35c5">
+<html data-wf-page="64f5b0a8ecc30ff7360d35e8" data-wf-site="64f5b0a8ecc30ff7360d35c5">
 <head>
   <meta charset="utf-8">
-  <title>404 Seite nicht gefunden - Jasmin Dettmer Resume - UI/UX Designer | Webflow Developer</title>
+  <title>Passwort geschützter Bereich - Jasmin Dettmer Resume - UI/UX Designer | Webflow Developer</title>
   <meta content="UI/UX-Designer, Webflow-Entwickler &amp; Figma-Experte – Entdecke meinen Lebenslauf. Kreative Benutzeroberflächen &amp; nahtlose Webentwicklung. 📱 01590 6107163" name="description">
-  <meta content="404 Seite nicht gefunden - Jasmin Dettmer Resume - UI/UX Designer | Webflow Developer" property="og:title">
+  <meta content="Passwort geschützter Bereich - Jasmin Dettmer Resume - UI/UX Designer | Webflow Developer" property="og:title">
   <meta content="UI/UX-Designer, Webflow-Entwickler &amp; Figma-Experte – Entdecke meinen Lebenslauf. Kreative Benutzeroberflächen &amp; nahtlose Webentwicklung. 📱 01590 6107163" property="og:description">
   <meta content="https://uploads-ssl.webflow.com/63cbc891fbf4f5441a0d1276/64c6c715339c9f8e9821d6a3_jasmin-dettmer-resume.webp" property="og:image">
-  <meta content="404 Seite nicht gefunden - Jasmin Dettmer Resume - UI/UX Designer | Webflow Developer" property="twitter:title">
+  <meta content="Passwort geschützter Bereich - Jasmin Dettmer Resume - UI/UX Designer | Webflow Developer" property="twitter:title">
   <meta content="UI/UX-Designer, Webflow-Entwickler &amp; Figma-Experte – Entdecke meinen Lebenslauf. Kreative Benutzeroberflächen &amp; nahtlose Webentwicklung. 📱 01590 6107163" property="twitter:description">
   <meta content="https://uploads-ssl.webflow.com/63cbc891fbf4f5441a0d1276/64c6c715339c9f8e9821d6a3_jasmin-dettmer-resume.webp" property="twitter:image">
   <meta property="og:type" content="website">
@@ -44,27 +44,27 @@ https://cdn.jsdelivr.net/npm/splitting@1.0.6/dist/splitting-cells.css
 </style>
 </head>
 <body class="body">
-  <section class="page-sub-wrapper _404-sub-page">
-    <main class="main-404-wrapper">
-      <h1 class="main-404-headline">404</h1>
-      <p class="paragraph"><strong>Oops, das Design ist gerade auf Abenteuerreise! </strong>Aber keine Sorge, es wird zurückkommen, mit neuen Geschichten und Eindrücken – vielleicht sogar mit einer coolen Sonnenbrille.</p>
-      <div class="glowing-wrapper glowing-wrapper-active _404-btn">
-        <div class="glowing-wrapper-animations">
-          <div class="glowing-wrapper-glow"></div>
-          <div class="glowing-wrapper-mask-wrapper">
-            <div class="glowing-wrapper-mask"></div>
-          </div>
+  <div class="utility-page-wrap">
+    <div class="utility-page-content w-password-page w-form">
+      <form id="email-form" name="email-form" data-name="Email Form" action="/.wf_auth" method="post" class="utility-page-form w-password-page" data-wf-page-id="64f5b0a8ecc30ff7360d35e8" data-wf-element-id="64f454905c6740b91d1e9cc600000000000c">
+        <p class="fa-icons"></p>
+        <h2 class="subpage-headlines pw-page">Geschützter Bereich</h2>
+        <div class="padding-xsmall"></div><label for="pass" class="field-label w-password-page">Geben Sie das Passwort ein, um den Downloadbereich freizuschalten.</label>
+        <div class="padding-xsmall"></div><input type="password" class="cursor-hover w-password-page w-input" autofocus="true" maxlength="256" name="pass" data-name="field" placeholder="passwort eingeben" id="pass"><input type="submit" value="Anmelden" data-wait="Please wait..." class="pw-submit-btn w-password-page w-button">
+        <div class="w-password-page w-form-fail">
+          <div>Falsches Passwort. Bitte versuchen Sie es erneut.</div>
         </div>
-        <div class="glowing-wrapper-borders-masker">
-          <div class="glowing-wrapper-borders"></div>
+        <div style="display:none" class="w-password-page w-embed w-script"><input type="hidden" name="path" value="<%WF_FORM_VALUE_PATH%>"><input type="hidden" name="page" value="<%WF_FORM_VALUE_PAGE%>"></div>
+        <div style="display:none" class="w-password-page w-embed w-script">
+          <script type="application/javascript">(function _handlePasswordPageOnload() {
+	  if (/[?&]e=1(&|$)/.test(document.location.search)) {
+	    document.querySelector('.w-password-page.w-form-fail').style.display = 'block';
+	  }
+	})()</script>
         </div>
-        <a href="index.html" class="glowing-wrapper-btn cursor-hover home-link w-inline-block">
-          <div class="button-text text-center">Zurück zur Startseite</div>
-        </a>
-      </div>
-      <div class="padding-large"></div>
-    </main>
-  </section>
+      </form>
+    </div>
+  </div>
   <footer class="footer-wrapper">
     <div class="border-gradient"></div>
     <div class="copyright-wrapper">
@@ -310,7 +310,7 @@ body:hover .cursor-wrapper {
   <div class="star-container">
     <div class="star"></div>
   </div>
-  <div ms-code-animation="twinkling-star" class="star-animation _404-page"></div>
+  <div ms-code-animation="twinkling-star" class="star-animation pw-page"></div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=64f5b0a8ecc30ff7360d35c5" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
