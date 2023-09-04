@@ -5,7 +5,7 @@
 		"//": "========= PRIVATE SCRIPTS =========",
 		"_clean": "webflow clean",
 		"_build": "webflow build",
-		"_encrypt": "npx staticrypt public/downloads.html P@55W0RD -o public/downloads.html",
+		"_encrypt": "npx staticrypt downloads.html P@55W0RD -o downloads.html",
 		"_deploy": "npx netlify-cli deploy --dir=public --prod",
 		"_envDeploy": "NETLIFY_SITE_ID=f9b10f86-2f94-4ab2-8b9d-e221915e060f NETLIFY_AUTH_TOKEN=-eODX3SnO-jr23jaVxisGKbC-UQ3db5AaC9zzpFSa6U bash -c 'npm run _deploy'"
 	}
