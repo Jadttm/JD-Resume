@@ -1168,6 +1168,7 @@ a {
 }
 
 .page-sub-wrapper {
+  margin: 0 auto;
   max-width: 1440px;
   color: #ededed;
   grid-template-rows: auto auto auto auto auto auto;
