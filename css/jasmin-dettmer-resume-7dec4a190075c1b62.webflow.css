@@ -161,7 +161,7 @@ a {
 .body {
   -webkit-text-fill-color: inherit;
   cursor: none;
-  background-color: ##0f0e0e;
+  background-color: #0f0e0e;
   /*background-color: #181818;*/
   background-clip: border-box;
 }
